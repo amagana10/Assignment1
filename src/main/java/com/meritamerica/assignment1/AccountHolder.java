@@ -85,10 +85,10 @@ public class AccountHolder {
 	public String toString() {
 		return "Name: " + this.firstName + this.middleName + this.lastName +"\n"
 				+ "SSN: " + this.ssn +"\n"
-				+ "Checking Account Balance: " + this.cAccount.getBalance() +"\n"
+				+ "Checking Account Balance: $" + this.cAccount.getBalance() +"\n"
 				+ "Checking Account Interest Rate: " + this.cAccount.getInterestRate() +"\n"
 				+ "Checking Account Balance in " + YEARS + " years: $" + this.cAccount.futureValue(YEARS) +"\n"
-				+ "Savings Account Balance: "+ this.sAccount.getBalance() +"\n"
+				+ "Savings Account Balance: $"+ this.sAccount.getBalance() +"\n"
 				+ "Savings Account Interest Rate: "+ this.sAccount.getInterestRate() +"\n"
 				+ "Savings Account Balance in " + YEARS + " years: $"+ this.sAccount.futureValue(YEARS) +"\n";
 	}
