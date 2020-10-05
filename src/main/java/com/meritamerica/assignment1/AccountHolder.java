@@ -21,8 +21,8 @@ public class AccountHolder {
 	    this.middleName = "none";
 	    this.lastName = "none";
 	    this.ssn = "none";
-	    this.sAccount = new SavingsAccount();
-	    this.cAccount = new CheckingAccount();
+	    this.sAccount = new SavingsAccount(0);
+	    this.cAccount = new CheckingAccount(0);
 	    
 	}
 	
@@ -83,12 +83,10 @@ public class AccountHolder {
 	}
 	
 	public String toString() {
-		return "Name: " + this.firstName + this.middleName + this.lastName +"\n"
+		return "Name: " + this.firstName + " " + this.middleName + " " + this.lastName +"\n"
 				+ "SSN: " + this.ssn +"\n"
 				+ this.cAccount.toString() 
-				+ "Savings Account Balance: $"+ this.sAccount.getBalance() +"\n"
-				+ "Savings Account Interest Rate: "+ this.sAccount.getInterestRate() +"\n"
-				+ "Savings Account Balance in " + YEARS + " years: $"+ this.sAccount.futureValue(YEARS) +"\n";
+				+ this.sAccount.toString(); 
 	}
 	
 }

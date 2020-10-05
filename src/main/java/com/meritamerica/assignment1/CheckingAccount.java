@@ -44,8 +44,8 @@ package com.meritamerica.assignment1;
 		return this.balance * (Math.pow(1 + this.interestRate, years));
 	}
 	public String toString() {
-		return  "Checking Account Balance: $" + this.getBalance() +"\n"
-				+ "Checking Account Interest Rate: " + this.getInterestRate() +"\n"
-				+ "Checking Account Balance in " + AccountHolder.YEARS + " years: $" + this.futureValue(AccountHolder.YEARS) +"\n";
+		return  "Checking Account Balance: $" + String.format("%.2f", this.getBalance()) +"\n"
+				+ "Checking Account Interest Rate: " + String.format("%.4f", this.getInterestRate()) +"\n"
+				+ "Checking Account Balance in " + AccountHolder.YEARS + " years: $" + String.format("%.2f",this.futureValue(AccountHolder.YEARS)) +"\n";
 	}
 }

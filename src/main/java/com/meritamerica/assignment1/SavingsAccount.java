@@ -1,14 +1,14 @@
 package com.meritamerica.assignment1;
 
 public class SavingsAccount {
-	public class SavingAccount {
+	
 		private double balance;
 		private double interestRate;
 
-		public SavingAccount(double openingBalance) {
+		public SavingsAccount(double openingBalance) {
 			this.balance = openingBalance;
 			this.interestRate = 0.01;
-}
+		}
 		
 		public double getBalance() {
 			return this.balance;
@@ -44,9 +44,9 @@ public class SavingsAccount {
 			return this.balance * (Math.pow(1 + this.interestRate, years));
 		}
 		public String toString() {
-			return  "Saving Account Balance: $" + this.getBalance() +"\n"
+			return  "Saving Account Balance: $" + String.format("%.2f", this.getBalance()) +"\n"
 					+ "Saving Account Interest Rate: " + this.getInterestRate() +"\n"
-					+ "Saving Account Balance in " + AccountHolder.YEARS + " years: $" + this.futureValue(AccountHolder.YEARS) +"\n";
+					+ "Saving Account Balance in " + AccountHolder.YEARS + " years: $" + String.format("%.2f",this.futureValue(AccountHolder.YEARS)) +"\n";
 		}
-	}
+	
 }
